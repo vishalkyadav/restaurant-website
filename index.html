@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Reservation — Café, Salon &amp; Dining Room, Bengaluru</title>
+<meta name="description" content="The Reservation is a twelve-table café and dining room in a 1940s Indiranagar townhouse. Modern Indian soul, French technique, Japanese restraint. Open for coffee, lunch and an unhurried evening." />
+<meta name="theme-color" content="#12100e" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ─────────── Preloader ─────────── -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__mark">
+    <svg viewBox="0 0 64 64" class="mark mark--loader" role="presentation">
+      <path d="M12 54V29a20 20 0 0 1 40 0v25" />
+      <path d="M24 43V22m0 0h7.5a5.75 5.75 0 0 1 0 11.5H24" />
+      <path d="M30.5 33.5 38 43" />
+    </svg>
+    <span class="preloader__word">The Reservation</span>
+    <span class="preloader__bar"><i></i></span>
+  </div>
+</div>
+
+<a class="skip" href="#house">Skip to content</a>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<!-- ─────────── Header ─────────── -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="brand" href="#top" aria-label="The Reservation — home">
+      <svg viewBox="0 0 64 64" class="mark" aria-hidden="true">
+        <path d="M12 54V29a20 20 0 0 1 40 0v25" />
+        <path d="M24 43V22m0 0h7.5a5.75 5.75 0 0 1 0 11.5H24" />
+        <path d="M30.5 33.5 38 43" />
+      </svg>
+      <span class="brand__type">
+        <span class="brand__name">The Reservation</span>
+        <span class="brand__sub">Café &amp; Dining Room</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#cuisine" class="nav__link"><span>01</span> Cuisine</a>
+      <a href="#menu" class="nav__link"><span>02</span> Menu</a>
+      <a href="#experience" class="nav__link"><span>03</span> Experience</a>
+      <a href="#house" class="nav__link"><span>04</span> The House</a>
+      <a href="#visit" class="nav__link"><span>05</span> Visit</a>
+    </nav>
+
+    <div class="header__actions">
+      <button class="cart-btn" id="cartToggle" aria-label="Open your selection" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M4 7.5h16l-1.3 12.2a1.4 1.4 0 0 1-1.4 1.3H6.7a1.4 1.4 0 0 1-1.4-1.3Z" />
+          <path d="M8.6 10V6.4a3.4 3.4 0 0 1 6.8 0V10" />
+        </svg>
+        <span class="cart-btn__count" id="cartCount">0</span>
+      </button>
+      <a href="#reserve" class="btn btn--brass btn--sm magnetic">Reserve</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ─────────── Mobile overlay nav ─────────── -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav class="mobile-nav__links" aria-label="Mobile">
+    <a href="#cuisine"><span>01</span> Cuisine</a>
+    <a href="#menu"><span>02</span> Menu</a>
+    <a href="#experience"><span>03</span> Experience</a>
+    <a href="#house"><span>04</span> The House</a>
+    <a href="#visit"><span>05</span> Visit</a>
+  </nav>
+  <div class="mobile-nav__foot">
+    <p>12 tables · Indiranagar, Bengaluru</p>
+    <a href="tel:+918041238890">+91 80 4123 8890</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ─────────── Hero ─────────── -->
+  <section class="hero" aria-label="The Reservation">
+    <div class="hero__media">
+      <img src="assets/img/hero-1920.jpg"
+           srcset="assets/img/hero-960.jpg 960w, assets/img/hero-1920.jpg 1920w"
+           sizes="100vw" alt="The candlelit marble bar and dining room of The Reservation at dusk" fetchpriority="high" data-hero-img />
+      <span class="hero__grain" aria-hidden="true"></span>
+    </div>
+    <div class="hero__veil" aria-hidden="true"></div>
+
+    <div class="hero__frame">
+      <div class="hero__inner">
+        <p class="hero__eyebrow" data-hero="1"><i class="dot"></i> Indiranagar, Bengaluru <span class="sep">/</span> Established 2011</p>
+
+        <h1 class="hero__title">
+          <span class="line"><span>The art of an</span></span>
+          <span class="line"><span>unhurried <em>evening</em></span></span>
+        </h1>
+
+        <div class="hero__lower">
+          <p class="hero__lede" data-hero="4">Twelve tables in a 1940s townhouse. A kitchen that moves between the spice markets of Old Bengaluru, the butter of Normandy and the quiet restraint of Kyoto.</p>
+          <div class="hero__actions" data-hero="5">
+            <a href="#menu" class="btn btn--brass magnetic">Explore the menu</a>
+            <a href="#reserve" class="btn btn--ghost magnetic">Reserve a table</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__strip" data-hero="6">
+        <div class="hero__strip-cell">
+          <span class="micro">Café</span>
+          <span class="hero__strip-val">08:00 — 18:00</span>
+        </div>
+        <div class="hero__strip-cell">
+          <span class="micro">Dining Room</span>
+          <span class="hero__strip-val">19:00 — 23:30</span>
+        </div>
+        <div class="hero__strip-cell hero__strip-cell--wide">
+          <span class="micro">The House</span>
+          <span class="hero__strip-val">12/1, 100 Feet Road, Indiranagar</span>
+        </div>
+        <a href="#house" class="hero__scroll" aria-label="Scroll to discover">
+          <span class="micro">Discover</span>
+          <span class="hero__scroll-line"><i></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── Ribbon ─────────── -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon__track">
+      <span>Modern Indian</span><i>◆</i><span>French Technique</span><i>◆</i><span>Japanese Restraint</span><i>◆</i><span>In-House Pâtisserie</span><i>◆</i><span>Single-Origin Coffee</span><i>◆</i>
+      <span>Modern Indian</span><i>◆</i><span>French Technique</span><i>◆</i><span>Japanese Restraint</span><i>◆</i><span>In-House Pâtisserie</span><i>◆</i><span>Single-Origin Coffee</span><i>◆</i>
+    </div>
+  </div>
+
+  <!-- ─────────── The House ─────────── -->
+  <section class="house section" id="house">
+    <div class="wrap">
+      <header class="sechead">
+        <p class="eyebrow reveal"><span>01</span> The House</p>
+        <h2 class="h2 reveal" data-d="80">A townhouse that keeps<br /><em>its own hours.</em></h2>
+      </header>
+
+      <div class="house__grid">
+        <div class="house__col house__col--sticky">
+          <p class="statement" data-wordlight>We are not in the business of dinner. We are in the business of the two hours around it — the pause before the first pour, the plate that arrives without ceremony, the conversation that outlasts the candle.</p>
+          <p class="house__body reveal" data-d="120">Built in 1948 as a family home on 100 Feet Road, the house still carries its original terrazzo floors, its verandah and its mango tree. We added twelve tables, a marble bar and a pastry room. We took nothing else away.</p>
+          <div class="house__sign reveal" data-d="200">
+            <span class="house__sign-line"></span>
+            <div>
+              <p class="house__sign-name">Meher Kapadia</p>
+              <p class="micro">Founder &amp; Executive Chef</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="house__media">
+          <figure class="frame frame--tall reveal-img" data-parallax="0.06">
+            <img src="assets/img/espresso-bar-1920.jpg" srcset="assets/img/espresso-bar-960.jpg 960w, assets/img/espresso-bar-1920.jpg 1920w" sizes="(max-width: 900px) 90vw, 42vw" alt="The brass espresso bar with dried florals and stacked ceramic cups" loading="lazy" decoding="async" />
+            <figcaption class="micro">The espresso bar, ground floor</figcaption>
+          </figure>
+          <figure class="frame frame--small reveal-img" data-d="160" data-parallax="-0.05">
+            <img src="assets/img/table-detail-1920.jpg" srcset="assets/img/table-detail-960.jpg 960w, assets/img/table-detail-1920.jpg 1920w" sizes="(max-width: 900px) 55vw, 22vw" alt="Brass flatware and silk napkin on ivory linen" loading="lazy" decoding="async" />
+            <figcaption class="micro">Hand-forged brass, cast in Channapatna</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat reveal"><span class="stat__num" data-count="12">12</span><span class="micro">Tables, by design</span></div>
+        <div class="stat reveal" data-d="90"><span class="stat__num" data-count="14">14</span><span class="micro">Years on this street</span></div>
+        <div class="stat reveal" data-d="180"><span class="stat__num" data-count="38">38</span><span class="micro">Small producers</span></div>
+        <div class="stat reveal" data-d="270"><span class="stat__num" data-count="3">3</span><span class="micro">Kitchens, one pass</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── Cuisines ─────────── -->
+  <section class="cuisine section" id="cuisine">
+    <div class="wrap">
+      <header class="sechead sechead--split">
+        <div>
+          <p class="eyebrow reveal"><span>02</span> The Kitchens</p>
+          <h2 class="h2 reveal" data-d="80">Four kitchens,<br /><em>one table.</em></h2>
+        </div>
+        <p class="sechead__note reveal" data-d="160">Each kitchen has its own chef, its own fire and its own grammar. They meet only at the pass — where every plate is finished by hand, under one light.</p>
+      </header>
+
+      <div class="cuisine__grid">
+        <a href="#menu" class="cu-card cu-card--tall" data-reveal-card>
+          <img src="assets/img/lamb-1920.jpg" srcset="assets/img/lamb-960.jpg 960w, assets/img/lamb-1920.jpg 1920w" sizes="(max-width: 900px) 92vw, 46vw" alt="Tamarind-glazed lamb shank with smoked aubergine" loading="lazy" decoding="async" />
+          <span class="cu-card__shade"></span>
+          <span class="cu-card__no">i.</span>
+          <span class="cu-card__body">
+            <span class="cu-card__meta">Bengaluru · Delhi · Lucknow</span>
+            <span class="cu-card__title">Modern Indian</span>
+            <span class="cu-card__desc">Stone-ground masalas, slow fire, and a respect for the recipes we were given — rearranged, never reinvented.</span>
+            <span class="cu-card__cta">Six plates <i>→</i></span>
+          </span>
+        </a>
+
+        <a href="#menu" class="cu-card" data-reveal-card data-d="90">
+          <img src="assets/img/roast-1920.jpg" srcset="assets/img/roast-960.jpg 960w, assets/img/roast-1920.jpg 1920w" sizes="(max-width: 900px) 92vw, 44vw" alt="Miso-glazed whole celeriac carved open on a ceramic platter" loading="lazy" decoding="async" />
+          <span class="cu-card__shade"></span>
+          <span class="cu-card__no">ii.</span>
+          <span class="cu-card__body">
+            <span class="cu-card__meta">Normandy · Lyon</span>
+            <span class="cu-card__title">French Technique</span>
+            <span class="cu-card__desc">Butter, stock and patience. Sauce work that takes three days and says nothing about itself.</span>
+            <span class="cu-card__cta">Five plates <i>→</i></span>
+          </span>
+        </a>
+
+        <a href="#menu" class="cu-card" data-reveal-card>
+          <img src="assets/img/sashimi-1920.jpg" srcset="assets/img/sashimi-960.jpg 960w, assets/img/sashimi-1920.jpg 1920w" sizes="(max-width: 900px) 92vw, 44vw" alt="Yellowtail sashimi with yuzu kosho on dark slate" loading="lazy" decoding="async" />
+          <span class="cu-card__shade"></span>
+          <span class="cu-card__no">iii.</span>
+          <span class="cu-card__body">
+            <span class="cu-card__meta">Kyoto · Kochi</span>
+            <span class="cu-card__title">Japanese Restraint</span>
+            <span class="cu-card__desc">Fish flown in twice a week, cut at the counter. Three ingredients on the plate. Never four.</span>
+            <span class="cu-card__cta">Four plates <i>→</i></span>
+          </span>
+        </a>
+
+        <a href="#menu" class="cu-card cu-card--wide" data-reveal-card data-d="90">
+          <img src="assets/img/pastry-1920.jpg" srcset="assets/img/pastry-960.jpg 960w, assets/img/pastry-1920.jpg 1920w" sizes="(max-width: 900px) 92vw, 46vw" alt="Pastries on brass stands under a glass cloche" loading="lazy" decoding="async" />
+          <span class="cu-card__shade"></span>
+          <span class="cu-card__no">iv.</span>
+          <span class="cu-card__body">
+            <span class="cu-card__meta">The Pastry Room</span>
+            <span class="cu-card__title">Pâtisserie &amp; Coffee</span>
+            <span class="cu-card__desc">Laminated over three days, roasted in-house each Tuesday. Served from eight in the morning, at the marble counter.</span>
+            <span class="cu-card__cta">Nine plates <i>→</i></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── Signature dishes ─────────── -->
+  <section class="dishes section" id="signatures">
+    <div class="wrap">
+      <header class="sechead sechead--split">
+        <div>
+          <p class="eyebrow reveal"><span>03</span> The Signatures</p>
+          <h2 class="h2 reveal" data-d="80">Plates we would<br /><em>be remembered by.</em></h2>
+        </div>
+        <p class="sechead__note reveal" data-d="160">Six dishes that have not left the menu since the year they arrived. Prices in Indian Rupees, inclusive of taxes.</p>
+      </header>
+
+      <div class="dish-grid">
+        <article class="dish reveal">
+          <div class="dish__media">
+            <img src="assets/img/scallop-1920.jpg" srcset="assets/img/scallop-960.jpg 960w, assets/img/scallop-1920.jpg 1920w" sizes="(max-width: 700px) 90vw, (max-width: 1100px) 44vw, 30vw" alt="Scallop crudo with saffron emulsion and finger lime" loading="lazy" decoding="async" />
+            <span class="dish__tag">Raw Bar</span>
+          </div>
+          <div class="dish__head">
+            <h3>Hokkaido Scallop Crudo</h3>
+            <span class="dish__price">₹1,450</span>
+          </div>
+          <p class="dish__desc">Hand-dived scallop, saffron emulsion, finger lime, sea purslane.</p>
+          <div class="dish__foot">
+            <span class="dish__note">Gluten free</span>
+            <button class="add" data-add data-name="Hokkaido Scallop Crudo" data-price="1450" data-meta="Raw Bar">Add to cart <i>+</i></button>
+          </div>
+        </article>
+
+        <article class="dish reveal" data-d="80">
+          <div class="dish__media">
+            <img src="assets/img/lamb-1920.jpg" srcset="assets/img/lamb-960.jpg 960w, assets/img/lamb-1920.jpg 1920w" sizes="(max-width: 700px) 90vw, (max-width: 1100px) 44vw, 30vw" alt="The 47-day lamb shank with tamarind glaze" loading="lazy" decoding="async" />
+            <span class="dish__tag">House Signature</span>
+          </div>
+          <div class="dish__head">
+            <h3>The 47-Day Lamb</h3>
+            <span class="dish__price">₹2,950</span>
+          </div>
+          <p class="dish__desc">Tamarind glaze, black cardamom, smoked aubergine, pickled shallot.</p>
+          <div class="dish__foot">
+            <span class="dish__note">Serves one</span>
+            <button class="add" data-add data-name="The 47-Day Lamb" data-price="2950" data-meta="House Signature">Add to cart <i>+</i></button>
+          </div>
+        </article>
+
+        <article class="dish reveal" data-d="160">
+          <div class="dish__media">
+            <img src="assets/img/risotto-1920.jpg" srcset="assets/img/risotto-960.jpg 960w, assets/img/risotto-1920.jpg 1920w" sizes="(max-width: 700px) 90vw, (max-width: 1100px) 44vw, 30vw" alt="Saffron risotto with parmesan crisp" loading="lazy" decoding="async" />
+            <span class="dish__tag">Vegetarian</span>
+          </div>
+          <div class="dish__head">
+            <h3>Saffron &amp; Parmesan Risotto</h3>
+            <span class="dish__price">₹1,750</span>
+          </div>
+          <p class="dish__desc">Kashmiri saffron, 24-month parmigiano, chive oil, aged rice.</p>
+          <div class="dish__foot">
+            <span class="dish__note">Vegetarian</span>
+            <button class="add" data-add data-name="Saffron &amp; Parmesan Risotto" data-price="1750" data-meta="Vegetarian">Add to cart <i>+</i></button>
+          </div>
+        </article>
+
+        <article class="dish reveal">
+          <div class="dish__media">
+            <img src="assets/img/sashimi-1920.jpg" srcset="assets/img/sashimi-960.jpg 960w, assets/img/sashimi-1920.jpg 1920w" sizes="(max-width: 700px) 90vw, (max-width: 1100px) 44vw, 30vw" alt="Yellowtail sashimi with yuzu kosho and shiso" loading="lazy" decoding="async" />
+            <span class="dish__tag">Raw Bar</span>
+          </div>
+          <div class="dish__head">
+            <h3>Yellowtail, Yuzu Kosho</h3>
+            <span class="dish__price">₹1,650</span>
+          </div>
+          <p class="dish__desc">Five-day aged soy, shiso, toasted sesame, a whisper of chilli.</p>
+          <div class="dish__foot">
+            <span class="dish__note">Gluten free</span>
+            <button class="add" data-add data-name="Yellowtail, Yuzu Kosho" data-price="1650" data-meta="Raw Bar">Add to cart <i>+</i></button>
+          </div>
+        </article>
+
+        <article class="dish reveal" data-d="80">
+          <div class="dish__media">
+            <img src="assets/img/dessert-1920.jpg" srcset="assets/img/dessert-960.jpg 960w, assets/img/dessert-1920.jpg 1920w" sizes="(max-width: 700px) 90vw, (max-width: 1100px) 44vw, 30vw" alt="Chocolate and cardamom delice with gold leaf" loading="lazy" decoding="async" />
+            <span class="dish__tag">Dessert</span>
+          </div>
+          <div class="dish__head">
+            <h3>Chocolate &amp; Cardamom Délice</h3>
+            <span class="dish__price">₹750</span>
+          </div>
+          <p class="dish__desc">Seventy percent Valrhona, green cardamom, salted milk ice cream.</p>
+          <div class="dish__foot">
+            <span class="dish__note">Vegetarian</span>
+            <button class="add" data-add data-name="Chocolate &amp; Cardamom Délice" data-price="750" data-meta="Dessert">Add to cart <i>+</i></button>
+          </div>
+        </article>
+
+        <article class="dish reveal" data-d="160">
+          <div class="dish__media">
+            <img src="assets/img/bread-1920.jpg" srcset="assets/img/bread-960.jpg 960w, assets/img/bread-1920.jpg 1920w" sizes="(max-width: 700px) 90vw, (max-width: 1100px) 44vw, 30vw" alt="Sourdough with smoked cultured butter" loading="lazy" decoding="async" />
+            <span class="dish__tag">To Begin</span>
+          </div>
+          <div class="dish__head">
+            <h3>Smoked Cultured Butter</h3>
+            <span class="dish__price">₹480</span>
+          </div>
+          <p class="dish__desc">Stone-baked sourdough, cultured cream, Maldon salt, chives.</p>
+          <div class="dish__foot">
+            <span class="dish__note">Vegetarian</span>
+            <button class="add" data-add data-name="Smoked Cultured Butter" data-price="480" data-meta="To Begin">Add to cart <i>+</i></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── Featured dish ─────────── -->
+  <section class="featured" aria-label="Chef's signature">
+    <div class="featured__media">
+      <img src="assets/img/roast-1920.jpg" srcset="assets/img/roast-960.jpg 960w, assets/img/roast-1920.jpg 1920w" sizes="100vw" alt="Miso-glazed celeriac carved open at the table" loading="lazy" decoding="async" data-parallax-img="0.12" />
+      <span class="featured__shade" aria-hidden="true"></span>
+    </div>
+    <div class="wrap featured__inner">
+      <p class="eyebrow eyebrow--light reveal"><span>04</span> From the Pass</p>
+      <h2 class="featured__title reveal" data-d="80">Miso Celeriac,<br /><em>burnt honey.</em></h2>
+      <p class="featured__desc reveal" data-d="140">Roasted whole for four hours in its own salt crust, glazed with white miso and wild honey from the Nilgiris, finished with hazelnut crumble and charred leek. Carved at the table for two.</p>
+      <div class="featured__row reveal" data-d="200">
+        <span class="featured__price">₹1,650</span>
+        <button class="add add--light" data-add data-name="Miso Celeriac, Burnt Honey" data-price="1650" data-meta="From the Pass">Add to cart <i>+</i></button>
+      </div>
+      <p class="featured__foot micro reveal" data-d="240">Vegetarian · Serves two as a main · Available from 19:00</p>
+    </div>
+  </section>
+
+  <!-- ─────────── Menu ─────────── -->
+  <section class="menu section" id="menu">
+    <div class="wrap">
+      <header class="sechead sechead--split">
+        <div>
+          <p class="eyebrow reveal"><span>05</span> The Carte</p>
+          <h2 class="h2 reveal" data-d="80">Read it slowly.<br /><em>Order generously.</em></h2>
+        </div>
+        <p class="sechead__note reveal" data-d="160">The kitchen changes four plates each season; the rest you see here are permanent residents. All prices in INR, taxes included.</p>
+      </header>
+
+      <div class="menu__bar reveal">
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="plates">Petits Plates</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="signatures">Signatures</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="desserts">Desserts</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="cafe">Café &amp; Pâtisserie</button>
+          <span class="tabs__ink" aria-hidden="true"></span>
+        </div>
+        <span class="micro menu__count" id="menuCount">5 plates</span>
+      </div>
+
+      <div class="menu__panels">
+        <div class="menu__panel is-active" data-panel="plates" role="tabpanel">
+          <ul class="menu__list">
+            <li class="menu__row">
+              <div class="menu__info"><h3>Hokkaido Scallop Crudo</h3><p>saffron emulsion · finger lime · sea purslane</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹1,450</span>
+              <button class="add add--icon" data-add data-name="Hokkaido Scallop Crudo" data-price="1450" data-meta="Petits Plates" aria-label="Add Hokkaido Scallop Crudo to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Yellowtail, Yuzu Kosho</h3><p>five-day aged soy · shiso · toasted sesame</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹1,650</span>
+              <button class="add add--icon" data-add data-name="Yellowtail, Yuzu Kosho" data-price="1650" data-meta="Petits Plates" aria-label="Add Yellowtail to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Kashmiri Morel Croquettes</h3><p>walnut chutney · saffron aioli · wild herbs</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹1,250</span>
+              <button class="add add--icon" data-add data-name="Kashmiri Morel Croquettes" data-price="1250" data-meta="Petits Plates" aria-label="Add Morel Croquettes to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Smoked Cultured Butter</h3><p>stone-baked sourdough · Maldon salt · chives</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹480</span>
+              <button class="add add--icon" data-add data-name="Smoked Cultured Butter" data-price="480" data-meta="Petits Plates" aria-label="Add Smoked Cultured Butter to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Burrata &amp; Heirloom Tomato</h3><p>basil oil · twelve-year balsamic · smoked salt</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹1,150</span>
+              <button class="add add--icon" data-add data-name="Burrata &amp; Heirloom Tomato" data-price="1150" data-meta="Petits Plates" aria-label="Add Burrata to cart">+</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu__panel" data-panel="signatures" role="tabpanel" hidden>
+          <ul class="menu__list">
+            <li class="menu__row">
+              <div class="menu__info"><h3>The 47-Day Lamb</h3><p>tamarind glaze · black cardamom · smoked aubergine</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹2,950</span>
+              <button class="add add--icon" data-add data-name="The 47-Day Lamb" data-price="2950" data-meta="Signatures" aria-label="Add The 47-Day Lamb to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Miso Celeriac, Burnt Honey</h3><p>hazelnut crumble · charred leek · four hours in salt</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹1,650</span>
+              <button class="add add--icon" data-add data-name="Miso Celeriac, Burnt Honey" data-price="1650" data-meta="Signatures" aria-label="Add Miso Celeriac to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Malabar Prawn Moilee</h3><p>coconut · kokum · curry leaf · lace appam</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹2,250</span>
+              <button class="add add--icon" data-add data-name="Malabar Prawn Moilee" data-price="2250" data-meta="Signatures" aria-label="Add Prawn Moilee to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Wild Mushroom Pithivier</h3><p>porcini duxelles · madeira · winter truffle</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹1,950</span>
+              <button class="add add--icon" data-add data-name="Wild Mushroom Pithivier" data-price="1950" data-meta="Signatures" aria-label="Add Mushroom Pithivier to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Saffron &amp; Parmesan Risotto</h3><p>Kashmiri saffron · 24-month parmigiano · chive oil</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹1,750</span>
+              <button class="add add--icon" data-add data-name="Saffron &amp; Parmesan Risotto" data-price="1750" data-meta="Signatures" aria-label="Add Risotto to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Assam Tea-Smoked Duck</h3><p>plum · burnt orange · five-spice jus</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹2,650</span>
+              <button class="add add--icon" data-add data-name="Assam Tea-Smoked Duck" data-price="2650" data-meta="Signatures" aria-label="Add Smoked Duck to cart">+</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu__panel" data-panel="desserts" role="tabpanel" hidden>
+          <ul class="menu__list">
+            <li class="menu__row">
+              <div class="menu__info"><h3>Chocolate &amp; Cardamom Délice</h3><p>70% Valrhona · green cardamom · salted milk ice cream</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹750</span>
+              <button class="add add--icon" data-add data-name="Chocolate &amp; Cardamom Délice" data-price="750" data-meta="Desserts" aria-label="Add Chocolate Delice to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Pistachio Paris-Brest</h3><p>Iranian pistachio · orange blossom · craquelin</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹650</span>
+              <button class="add add--icon" data-add data-name="Pistachio Paris-Brest" data-price="650" data-meta="Desserts" aria-label="Add Paris-Brest to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Vanilla Mille-Feuille</h3><p>Madagascan vanilla · caramelised puff · burnt sugar</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹600</span>
+              <button class="add add--icon" data-add data-name="Vanilla Mille-Feuille" data-price="600" data-meta="Desserts" aria-label="Add Mille-Feuille to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Filter Kaapi Crème Brûlée</h3><p>jaggery · cardamom · palm sugar glass</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹550</span>
+              <button class="add add--icon" data-add data-name="Filter Kaapi Crème Brûlée" data-price="550" data-meta="Desserts" aria-label="Add Kaapi Creme Brulee to cart">+</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu__panel" data-panel="cafe" role="tabpanel" hidden>
+          <ul class="menu__list">
+            <li class="menu__row">
+              <div class="menu__info"><h3>Single-Origin Cappuccino</h3><p>Chikmagalur washed · roasted in-house · 180 ml</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹380</span>
+              <button class="add add--icon" data-add data-name="Single-Origin Cappuccino" data-price="380" data-meta="Café" aria-label="Add Cappuccino to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Kashmiri Saffron Latte</h3><p>almond milk · crushed pistachio · wildflower honey</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹460</span>
+              <button class="add add--icon" data-add data-name="Kashmiri Saffron Latte" data-price="460" data-meta="Café" aria-label="Add Saffron Latte to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Valrhona Mocha</h3><p>64% dark · cocoa nib dust · steamed cream</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹450</span>
+              <button class="add add--icon" data-add data-name="Valrhona Mocha" data-price="450" data-meta="Café" aria-label="Add Mocha to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Filter Kaapi</h3><p>brass tumbler · chicory · jaggery on the side</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹280</span>
+              <button class="add add--icon" data-add data-name="Filter Kaapi" data-price="280" data-meta="Café" aria-label="Add Filter Kaapi to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Pistachio Croissant</h3><p>three-day lamination · pistachio cream · rose</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹320</span>
+              <button class="add add--icon" data-add data-name="Pistachio Croissant" data-price="320" data-meta="Pâtisserie" aria-label="Add Pistachio Croissant to cart">+</button>
+            </li>
+            <li class="menu__row">
+              <div class="menu__info"><h3>Basque Cheesecake</h3><p>burnt top · saffron · Maldon salt</p></div>
+              <span class="menu__dots"></span>
+              <span class="menu__price">₹420</span>
+              <button class="add add--icon" data-add data-name="Basque Cheesecake" data-price="420" data-meta="Pâtisserie" aria-label="Add Basque Cheesecake to cart">+</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="menu__foot micro reveal">A discretionary service charge of 10% applies. Please tell us about allergies — the kitchen will adjust.</p>
+    </div>
+  </section>
+
+  <!-- ─────────── Experience ─────────── -->
+  <section class="experience section" id="experience">
+    <div class="wrap">
+      <header class="sechead sechead--split">
+        <div>
+          <p class="eyebrow eyebrow--light reveal"><span>06</span> The Experience</p>
+          <h2 class="h2 reveal" data-d="80">Four rooms,<br /><em>four moods.</em></h2>
+        </div>
+        <p class="sechead__note sechead__note--light reveal" data-d="160">The house opens gradually through the day — coffee at the counter, lunch on the verandah, dinner by candlelight, and the last pour in the courtyard.</p>
+      </header>
+
+      <div class="exp">
+        <div class="exp__rows">
+          <article class="exp__row is-active" data-exp="0">
+            <span class="exp__no">01</span>
+            <div class="exp__text">
+              <h3>The Chef's Table</h3>
+              <p>Eight seats at the pass, one seating a night. Eleven courses, no menu printed — the kitchen cooks what arrived that morning. Four hours, wine paired.</p>
+              <span class="exp__meta">₹7,500 per guest · Thursday to Saturday</span>
+            </div>
+          </article>
+          <article class="exp__row" data-exp="1">
+            <span class="exp__no">02</span>
+            <div class="exp__text">
+              <h3>Salon Privé</h3>
+              <p>A green-walled room behind a single olive door, set for six to fourteen. Linen, candlesticks and a service team of one per three guests. Yours for the evening.</p>
+              <span class="exp__meta">From ₹28,000 minimum spend · Private events</span>
+            </div>
+          </article>
+          <article class="exp__row" data-exp="2">
+            <span class="exp__no">03</span>
+            <div class="exp__text">
+              <h3>The Courtyard</h3>
+              <p>Beneath the original mango tree, seven tables under festoon light. Open from six for apéritifs and small plates, until the candles burn out.</p>
+              <span class="exp__meta">Walk-ins welcome · Weather permitting</span>
+            </div>
+          </article>
+          <article class="exp__row" data-exp="3">
+            <span class="exp__no">04</span>
+            <div class="exp__text">
+              <h3>The Coffee Counter</h3>
+              <p>Our roastery in the back room, a three-group lever machine at the front. Cupping sessions on Saturday mornings, eight seats, no charge.</p>
+              <span class="exp__meta">08:00 — 11:00 · Cupping Saturdays</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="exp__media" aria-hidden="true">
+          <figure class="exp__img is-active" data-exp-img="0"><img src="assets/img/chefs-table-1920.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure class="exp__img" data-exp-img="1"><img src="assets/img/private-dining-1920.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure class="exp__img" data-exp-img="2"><img src="assets/img/terrace-1920.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <figure class="exp__img" data-exp-img="3"><img src="assets/img/coffee-1920.jpg" alt="" loading="lazy" decoding="async" /></figure>
+          <span class="exp__caption micro" id="expCaption">The chef's table · eight seats at the pass</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── Chef ─────────── -->
+  <section class="chef section">
+    <div class="wrap chef__grid">
+      <figure class="chef__media reveal-img">
+        <img src="assets/img/chef-1920.jpg" srcset="assets/img/chef-960.jpg 960w, assets/img/chef-1920.jpg 1920w" sizes="(max-width: 900px) 92vw, 40vw" alt="Executive Chef Meher Kapadia in the kitchen" loading="lazy" decoding="async" data-parallax-img="0.05" />
+        <figcaption class="chef__cap micro">Meher Kapadia · Founder &amp; Executive Chef</figcaption>
+      </figure>
+
+      <div class="chef__copy">
+        <p class="eyebrow reveal"><span>07</span> The Chef</p>
+        <blockquote class="chef__quote reveal" data-d="80">“A recipe is only a memory someone wrote down. My work is to remember it properly — and then to let the evening be more important than the food.”</blockquote>
+        <p class="chef__body reveal" data-d="160">Meher trained in Paris, cooked in Kyoto, and came home to Bengaluru in 2011 with a notebook of her grandmother's masalas and a stubborn belief that a restaurant should feel like a house, not a stage. She still tastes every sauce before service.</p>
+        <div class="chef__facts">
+          <div class="reveal" data-d="200"><span class="micro">Training</span><p>Le Cordon Bleu, Paris · Kikunoi, Kyoto</p></div>
+          <div class="reveal" data-d="260"><span class="micro">Recognition</span><p>Golden Ladle, Restaurant of the Year 2025</p></div>
+        </div>
+        <p class="chef__sig reveal" data-d="300">Meher K.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── Gallery ─────────── -->
+  <section class="gallery" aria-label="The house in pictures">
+    <div class="gallery__head wrap">
+      <p class="eyebrow reveal"><span>08</span> The Album</p>
+      <p class="gallery__note micro">Photographed over one week in November, between services.</p>
+    </div>
+    <div class="gallery__viewport" id="galleryViewport">
+      <div class="gallery__track" id="galleryTrack">
+        <figure class="gallery__item">
+          <img src="assets/img/bar-1920.jpg" srcset="assets/img/bar-960.jpg 960w, assets/img/bar-1920.jpg 1920w" sizes="40vw" alt="The bar at night with amber bottles and a smoked cocktail" loading="lazy" decoding="async" />
+          <figcaption>Last pour, 23:20</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--tall">
+          <img src="assets/img/table-detail-1920.jpg" srcset="assets/img/table-detail-960.jpg 960w, assets/img/table-detail-1920.jpg 1920w" sizes="30vw" alt="Table setting detail with brass cutlery" loading="lazy" decoding="async" />
+          <figcaption>Table four, before service</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/img/pastry-1920.jpg" srcset="assets/img/pastry-960.jpg 960w, assets/img/pastry-1920.jpg 1920w" sizes="40vw" alt="Pastry counter with cloches of cakes" loading="lazy" decoding="async" />
+          <figcaption>The pastry room, 09:40</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--tall">
+          <img src="assets/img/terrace-1920.jpg" srcset="assets/img/terrace-960.jpg 960w, assets/img/terrace-1920.jpg 1920w" sizes="30vw" alt="Courtyard terrace at dusk with festoon lights" loading="lazy" decoding="async" />
+          <figcaption>The courtyard, 18:55</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/img/espresso-bar-1920.jpg" srcset="assets/img/espresso-bar-960.jpg 960w, assets/img/espresso-bar-1920.jpg 1920w" sizes="40vw" alt="Espresso bar in afternoon light" loading="lazy" decoding="async" />
+          <figcaption>Bar No. 2, ground floor</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/img/coffee-1920.jpg" srcset="assets/img/coffee-960.jpg 960w, assets/img/coffee-1920.jpg 1920w" sizes="30vw" alt="Cappuccino on a brass tray" loading="lazy" decoding="async" />
+          <figcaption>A single origin, 10:15</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── Press / quotes ─────────── -->
+  <section class="press section">
+    <div class="wrap">
+      <div class="press__top">
+        <p class="eyebrow reveal"><span>09</span> In Print</p>
+        <div class="press__logos reveal" data-d="80">
+          <span>The Gourmand Review</span><i>·</i><span>Epicure &amp; Co.</span><i>·</i><span>Slow Table Journal</span><i>·</i><span>Design Ledger</span>
+        </div>
+      </div>
+
+      <div class="quote-slider" id="quoteSlider">
+        <figure class="quote is-active">
+          <blockquote>“The most quietly confident dining room in Bengaluru — a place that has decided what it is and has no interest in explaining.”</blockquote>
+          <figcaption class="micro">The Gourmand Review · Restaurant of the Year</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“Kapadia's lamb has the rare quality of a dish that seems to have always existed. You do not order it twice; you simply return.”</blockquote>
+          <figcaption class="micro">Epicure &amp; Co. · The Fifty Tables</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“Coffee in the morning, candlelight at eight, and a courtyard that feels borrowed from another century. The house is the brand.”</blockquote>
+          <figcaption class="micro">Design Ledger · Spaces of the Year</figcaption>
+        </figure>
+        <div class="quote-slider__nav">
+          <button class="quote-dot is-active" data-quote="0" aria-label="Quote one"></button>
+          <button class="quote-dot" data-quote="1" aria-label="Quote two"></button>
+          <button class="quote-dot" data-quote="2" aria-label="Quote three"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── Reservation ─────────── -->
+  <section class="reserve" id="reserve">
+    <div class="reserve__media">
+      <img src="assets/img/terrace-1920.jpg" srcset="assets/img/terrace-960.jpg 960w, assets/img/terrace-1920.jpg 1920w" sizes="100vw" alt="The courtyard terrace at dusk" loading="lazy" decoding="async" data-parallax-img="0.08" />
+      <span class="reserve__shade" aria-hidden="true"></span>
+    </div>
+
+    <div class="wrap reserve__grid">
+      <div class="reserve__copy">
+        <p class="eyebrow eyebrow--light reveal"><span>10</span> Reservations</p>
+        <h2 class="reserve__title reveal" data-d="80">Keep an<br /><em>evening free.</em></h2>
+        <p class="reserve__lede reveal" data-d="140">We hold twelve tables and release them thirty days ahead. For parties above eight, or for the Salon Privé, write to us directly and we will plan the evening with you.</p>
+        <div class="reserve__contact reveal" data-d="200">
+          <a href="tel:+918041238890">+91 80 4123 8890</a>
+          <a href="mailto:table@thereservation.in">table@thereservation.in</a>
+        </div>
+      </div>
+
+      <form class="reserve__form reveal" data-d="120" id="reserveForm" novalidate>
+        <p class="reserve__form-title">Request a table</p>
+        <div class="field-row">
+          <label class="field">
+            <span class="micro">Date</span>
+            <input type="date" name="date" required />
+          </label>
+          <label class="field">
+            <span class="micro">Time</span>
+            <select name="time" required>
+              <option>19:00</option><option>19:30</option><option>20:00</option>
+              <option>20:30</option><option>21:00</option><option>21:30</option>
+            </select>
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span class="micro">Guests</span>
+            <select name="guests" required>
+              <option>2 guests</option><option>3 guests</option><option>4 guests</option>
+              <option>5 guests</option><option>6 guests</option><option>7 guests</option>
+              <option>8 guests</option><option>9+ guests</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="micro">Seating</span>
+            <select name="seating" required>
+              <option>Dining room</option><option>Courtyard</option>
+              <option>Chef's table</option><option>Salon Privé</option>
+            </select>
+          </label>
+        </div>
+        <label class="field">
+          <span class="micro">Name</span>
+          <input type="text" name="name" placeholder="Your full name" required />
+        </label>
+        <label class="field">
+          <span class="micro">Phone</span>
+          <input type="tel" name="phone" placeholder="+91" required />
+        </label>
+        <button type="submit" class="btn btn--brass btn--full magnetic">Request this table</button>
+        <p class="reserve__fine micro">Our maître d' confirms every request by phone within the hour. No prepayment required.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ─────────── Footer ─────────── -->
+<footer class="footer" id="visit">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <svg viewBox="0 0 64 64" class="mark mark--footer" aria-hidden="true">
+          <path d="M12 54V29a20 20 0 0 1 40 0v25" />
+          <path d="M24 43V22m0 0h7.5a5.75 5.75 0 0 1 0 11.5H24" />
+          <path d="M30.5 33.5 38 43" />
+        </svg>
+        <p class="footer__wordmark">The Reservation</p>
+        <p class="footer__tag">Café, salon &amp; dining room<br />Indiranagar, Bengaluru · Since 2011</p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <p class="micro">Visit</p>
+          <p>12/1, 100 Feet Road<br />Indiranagar, Bengaluru<br />Karnataka 560038</p>
+          <a href="#reserve" class="footer__link">Getting here <i>→</i></a>
+        </div>
+        <div class="footer__col">
+          <p class="micro">Hours</p>
+          <p>Café · 08:00 — 18:00<br />Dining · 19:00 — 23:30<br />Tuesday to Sunday</p>
+          <span class="footer__muted">Kitchen closes at 22:45</span>
+        </div>
+        <div class="footer__col">
+          <p class="micro">Enquiries</p>
+          <p><a href="tel:+918041238890">+91 80 4123 8890</a><br /><a href="mailto:table@thereservation.in">table@thereservation.in</a><br /><a href="mailto:events@thereservation.in">events@thereservation.in</a></p>
+        </div>
+        <div class="footer__col">
+          <p class="micro">Follow</p>
+          <p><a href="#top">Instagram</a><br /><a href="#top">Journal</a><br /><a href="#top">Gift cards</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__cta">
+      <p>Reservations for December open on the first.</p>
+      <a href="#reserve" class="btn btn--ghost btn--sm magnetic">Reserve a table</a>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="micro">© 2026 The Reservation. All rights reserved.</p>
+      <p class="micro">Design demonstration · Prices in INR</p>
+      <div class="footer__legal">
+        <a href="#top">Privacy</a><a href="#top">Terms</a><a href="#top">Careers</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─────────── Cart ─────────── -->
+<div class="scrim" id="scrim" aria-hidden="true"></div>
+<aside class="cart" id="cart" aria-label="Your selection" aria-hidden="true">
+  <div class="cart__head">
+    <div>
+      <p class="micro">Your selection</p>
+      <p class="cart__title">At the table</p>
+    </div>
+    <button class="cart__close" id="cartClose" aria-label="Close selection">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="cart__body" id="cartBody">
+    <div class="cart__empty" id="cartEmpty">
+      <svg viewBox="0 0 64 64" class="mark" aria-hidden="true">
+        <path d="M12 54V29a20 20 0 0 1 40 0v25" />
+        <path d="M24 43V22m0 0h7.5a5.75 5.75 0 0 1 0 11.5H24" />
+        <path d="M30.5 33.5 38 43" />
+      </svg>
+      <p>Your table is set,<br />but nothing is on it yet.</p>
+      <button class="btn btn--ghost btn--sm" id="cartBrowse">Browse the carte</button>
+    </div>
+    <ul class="cart__items" id="cartItems"></ul>
+  </div>
+
+  <div class="cart__foot">
+    <div class="cart__line"><span class="micro">Subtotal</span><span id="cartSubtotal">₹0</span></div>
+    <div class="cart__line cart__line--muted"><span class="micro">Service · 10%</span><span id="cartService">₹0</span></div>
+    <div class="cart__line cart__line--total"><span>Total</span><span id="cartTotal">₹0</span></div>
+    <button class="btn btn--brass btn--full" id="cartCheckout">Continue to reservation</button>
+    <p class="cart__fine micro">Demo interface — no payment is taken.</p>
+  </div>
+</aside>
+
+<!-- ─────────── Toast ─────────── -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast__dot"></span>
+  <span id="toastText">Added to your selection</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
